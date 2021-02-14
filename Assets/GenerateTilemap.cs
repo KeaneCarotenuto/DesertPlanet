@@ -6,8 +6,8 @@ using UnityEngine.Tilemaps;
 public class GenerateTilemap : MonoBehaviour
 {
 
-    public Tilemap ground;
-    public Tilemap obstacles;
+    public Tilemap groundTilemap;
+    public Tilemap obstaclesTilemap;
     public List<Tile> groundTiles;
     public List<Tile> obstTiles;
     public int width;
@@ -26,7 +26,7 @@ public class GenerateTilemap : MonoBehaviour
             {
                 Tile randTile = ((int)Random.Range(0, 1/groundEmptyChance) != 0 ? groundTiles[9] : groundTiles[Random.Range(0, groundTiles.Count)]);
 
-                ground.SetTile(new Vector3Int(x, y, 0), randTile);
+                groundTilemap.SetTile(new Vector3Int(x, y, 0), randTile);
             }
         }
 
@@ -38,7 +38,7 @@ public class GenerateTilemap : MonoBehaviour
 
                 if (randTile != null)
                 {
-                    obstacles.SetTile(new Vector3Int(x, y, 0), randTile);
+                    obstaclesTilemap.SetTile(new Vector3Int(x, y, 0), randTile);
                 }
             }
         }
