@@ -195,10 +195,21 @@ MonoBehaviour:
   obstTiles:
   - {fileID: 11400000, guid: 7baca897ad7de444e9531c72f1ff9d61, type: 2}
   - {fileID: 11400000, guid: c82510efe3a28824eb88c17610446a0b, type: 2}
-  width: 100
-  height: 100
+  cliffTile: {fileID: 11400000, guid: 81c0d548458e4d84c916fb1045075714, type: 2}
+  waterTile: {fileID: 11400000, guid: 48a1bc99c6990d14c801629ca43805dc, type: 2}
+  stoneTile: {fileID: 11400000, guid: 8fcb05e74a37e504cab33f90c564b608, type: 2}
+  width: 256
+  height: 256
+  noiseScale: 0.012
   groundEmptyChance: 0.1
   obstacleChance: 0.005
+  waterHeight: 0.135
+  maxTopoHeight: 20
+  topoLevels: 4
+  cliffWidth: 0.25
+  cliffSearchRadius: 2
+  cliffMinOtherCliffs: 12
+  cliffSmoothItterations: 1
 --- !u!1 &486090280
 GameObject:
   m_ObjectHideFlags: 0
