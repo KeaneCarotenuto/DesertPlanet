@@ -35,35 +35,7 @@ public class GenerateTilemap : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //CreateGround();
-
         CreateWorld();
-    }
-
-    private void CreateGround()
-    {
-        for (int y = -(height / 2); y < (height / 2); y++)
-        {
-            for (int x = -(width / 2); x < (width / 2); x++)
-            {
-                Tile randTile = ((int)Random.Range(0, 1 / groundEmptyChance) != 0 ? groundTiles[9] : groundTiles[Random.Range(0, groundTiles.Count)]);
-
-                groundTilemap.SetTile(new Vector3Int(x, y, 0), randTile);
-            }
-        }
-
-        for (int y = -(height / 2); y < (height / 2); y++)
-        {
-            for (int x = -(width / 2); x < (width / 2); x++)
-            {
-                Tile randTile = ((int)Random.Range(0, 1 / obstacleChance) != 0 ? null : obstTiles[Random.Range(0, obstTiles.Count)]);
-
-                if (randTile != null)
-                {
-                    obstaclesTilemap.SetTile(new Vector3Int(x, y, 0), randTile);
-                }
-            }
-        }
     }
 
     void Update()
